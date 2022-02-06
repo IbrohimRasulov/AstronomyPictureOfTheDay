@@ -16,6 +16,11 @@ const createCards = async () => {
       media.classList.add('picture');
       media.src = item.url;
       card.appendChild(media);
+      media.addEventListener('click', async () => {
+        await showCommentCard(item.title);
+        const modal = document.querySelector('.comment-model');
+        modal.classList.add('active');
+      });
     } else {
       const media = document.createElement('iframe');
       media.classList.add('video');
@@ -66,7 +71,6 @@ const createCards = async () => {
     const comment = document.createElement('button');
     comment.classList.add('comment-btn');
     comment.type = 'button';
-    comment.setAttribute('index', `${i}`);
     comment.setAttribute('title', `${item.title}`);
     comment.innerText = 'Comments';
 

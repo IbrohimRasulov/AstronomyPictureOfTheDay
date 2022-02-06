@@ -1,84 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Astronomy Picture of the Day</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-  <script defer src="main.js"></script></head>
 
-  <body>
-    <div class="app-container">
-      <div class="browser">
-        <p class="web-title">NASA</p>
-        <div class="browser-navigation">
-          <img src="8e84bd706e10f8dfbdc8.png" alt="Left arrow" id="previous" />
-          <img src="091c534a795f02a96a83.png" alt="Right arrow" id="next" />
-          <img src="261ad570bda0cb39ff85.png" alt="Delete" id="delete" />
-          <img src="2cbc0d1ba7f9a115fd3d.png" alt="Home" id="home" />
-          <div class="address-bar">
-            <p id="address">https://</p>
-          </div>
-          <img src="5a62b4b3dce3189b1eef.png" alt="Search bar" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astronomy Picture of the Day</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+<script defer src="main.js"></script></head>
+
+<body>
+  <div class="app-container">
+    <div class="browser">
+      <div class="browser-navigation">
+        <img src="8e84bd706e10f8dfbdc8.png" alt="Left arrow" id="previous" />
+        <img src="091c534a795f02a96a83.png" alt="Right arrow" id="next" />
+        <img src="261ad570bda0cb39ff85.png" alt="Delete" id="delete" />
+        <img src="2cbc0d1ba7f9a115fd3d.png" alt="Home" id="home" />
+        <div class="address-bar">
+          <p id="address">https://</p>
         </div>
-      </div>
-
-      <header>
-        <i class="fas fa-meteor"></i>
-        <p>Item count: <span id="picture-counter"></span></p>
-        <nav>
-          <ul>
-            <li><a href="#" class="active-tab">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <main class="content">
-        <section>
-          <h1 class="title">
-            <a
-              href="https://api.nasa.gov/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="title-link"
-              >Astronomy Picture of the Day</a
-            >
-          </h1>
-          <div class="item-grid"></div>
-          <div class="comment-model"></div>
-        </section>
-      </main>
-
-      <footer>
-        <p>
-          Copyright
-          <a
-            href="https://github.com/melaniesigrid"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@melaniesigrid</a
-          >
-          and
-          <a
-            href="https://github.com/IbrohimRasulov"
-            target="_blank"
-            rel="noopener noreferrer"
-            >@IbrohimRasulov</a
-          >
-        </p>
-      </footer>
-
-      <div class="bottom-decoration">
-        <p class="bars">//</p>
+        <img src="5a62b4b3dce3189b1eef.png" alt="Search bar" />
       </div>
     </div>
-  </body>
+
+    <header>
+      <p class="web-title">NASA</p>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#" class="active-tab">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li>Item count: <span id="picture-counter"></span></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section>
+        <h1 class="title">
+          <a href="https://api.nasa.gov/" target="_blank" rel="noopener noreferrer" class="title-link">Astronomy Picture
+            of the Day</a>
+        </h1>
+        <div class="item-grid"></div>
+        <div class="comment-model"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Copyright
+        <a href="https://github.com/melaniesigrid" target="_blank" rel="noopener noreferrer">@melaniesigrid</a>
+        and
+        <a href="https://github.com/IbrohimRasulov" target="_blank" rel="noopener noreferrer">@IbrohimRasulov</a>
+      </p>
+    </footer>
+</body>
+
 </html>

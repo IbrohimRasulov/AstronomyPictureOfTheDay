@@ -8,6 +8,14 @@
   src: url(./assets/Helvetica-Font/Helvetica.ttf) format("truetype");
 }
 
+:root {
+  --light-violet: #be9ce7;
+  --dark-violet: #9f5eee;
+  --dark-background: #18161e;
+  --light-background: #1b1a27;
+  --custom-red: #eb3f5e;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -30,11 +38,9 @@ a {
     "top-decoration"
     "header"
     "main"
-    "footer"
-    "bottom-decoration";
-  border: 4px solid #be9ce7;
-  border-radius: 15px;
-  background-color: #18161e;
+    "footer";
+  border: 4px solid var(--light-violet);
+  background-color: var(--dark-background);
 }
 
 .browser {
@@ -42,15 +48,7 @@ a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  border-bottom: 4px solid #be9ce7;
-}
-
-.web-title {
-  font-family: "Nasalization", sans-serif;
-  font-size: 2.7rem;
-  margin-top: 1vh;
-  margin-bottom: 0;
-  color: #eb3f5e;
+  border-bottom: 4px solid var(--light-violet);
 }
 
 .browser-navigation {
@@ -58,7 +56,7 @@ a {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 0 30px;
+  padding: 1.5vh 30px;
 }
 
 .browser-navigation img {
@@ -73,9 +71,9 @@ a {
   padding: 8px;
   width: 60vw;
   height: 40px;
-  border: 4px solid #be9ce7;
-  background-color: #18161e;
-  color: #be9ce7;
+  border: 4px solid var(--light-violet);
+  background-color: var(--dark-background);
+  color: var(--light-violet);
   font-weight: bold;
   border-radius: 10px;
 }
@@ -85,12 +83,22 @@ a {
 }
 
 header {
-  background-color: transparent;
+  background-color: var(--light-background);
   grid-area: header;
-  padding: 5px 80px;
+  margin: 15px 20px;
+  padding: 5px 0 5px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 3px solid var(--light-violet);
+  border-radius: 10px;
+}
+
+.web-title {
+  font-family: "Nasalization", sans-serif;
+  font-size: 2.7rem;
+  margin: 0 0;
+  color: var(--custom-red);
 }
 
 .content {
@@ -111,7 +119,7 @@ header {
 }
 
 .title-link:hover {
-  color: #be9ce7;
+  color: var(--light-violet);
   cursor: pointer;
 }
 
@@ -125,19 +133,44 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px solid white;
+  border: 3px solid #fff;
   border-radius: 15px;
   width: 25vw;
   margin-bottom: 8vh;
+  animation-name: out;
+  transition: ease-in-out 0.4s;
 }
 
 .card:hover {
-  border-color: #be9ce7;
+  border-color: var(--dark-violet);
+  transform: scale(1.05);
+  transition: ease-in-out 0.4s;
+  animation-name: in;
+}
+
+@keyframes in {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes out {
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 .picture {
   width: 20vw;
-  height: 20vw;
+  height: 15vw;
   border-radius: 15px;
   object-fit: cover;
   margin-top: 5vh;
@@ -149,7 +182,7 @@ header {
 
 .video {
   width: 20vw;
-  height: 20vw;
+  height: 15vw;
   border-radius: 15px;
   margin-top: 5vh;
 }
@@ -165,7 +198,7 @@ header {
 }
 
 .card-title:hover {
-  color: #be9ce7;
+  color: var(--light-violet);
   cursor: pointer;
 }
 
@@ -183,49 +216,38 @@ header {
 }
 
 .comment-btn {
-  color: white;
-  background-color: #1b1a27;
-  border: 3px solid white;
+  color: #fff;
+  background-color: var(--dark-background);
+  border: 3px solid #fff;
   font-family: "Helvetica", sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
 .comment-btn:hover {
-  color: #be9ce7;
-  border-color: #be9ce7;
+  color: var(--light-violet);
+  border-color: var(--light-violet);
   cursor: pointer;
 }
 
 .fa-heart {
   margin-right: 15px;
   font-size: 1.3rem;
+  color: var(--custom-red);
 }
 
 .fa-heart:hover {
   cursor: pointer;
-  color: #eb3f5e;
 }
 
 footer {
   grid-area: footer;
-  border: 3px solid #be9ce7;
+  border: 3px solid var(--light-violet);
   height: 50px;
   margin: 15px 20px 15px 20px;
   padding-left: 20px;
-  background-color: #1b1a27;
-}
-
-.bottom-decoration {
-  text-align: right;
-  grid-area: bottom-decoration;
-  border-top: 3px solid #be9ce7;
-}
-
-.bottom-decoration > .bars {
-  font-size: 1.9rem;
-  padding-right: 10px;
-  margin: 3px;
+  background-color: var(--light-background);
+  border-radius: 10px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -235,16 +257,11 @@ footer {
 }
 
 * {
-  color: #ddd;
+  color: #ebebeb;
 }
 
 section {
-  margin-bottom: 200px;
-}
-
-header i {
-  color: #f59259;
-  font-size: 2rem;
+  margin-bottom: 100px;
 }
 
 header p {
@@ -263,7 +280,7 @@ nav ul li a {
 }
 
 a:hover {
-  color: #be9ce7;
+  color: var(--light-violet);
 }
 
 .active-tab {
