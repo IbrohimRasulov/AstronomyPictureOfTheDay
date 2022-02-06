@@ -166,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ getPictures)\n/* harmony export */ });\nconst baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';\nconst key = 'j9gWflgyCduUULTGmKMfahoaNAbzAULMkGGuu9jN';\nconst startDate = '2022-01-31';\nconst endDate = '2022-02-06';\nconst url = `${baseUrl}${key}&start_date=${startDate}&end_date=${endDate}`;\n\nconst getPictures = async () => {\n  const response = await fetch(url);\n  const answer = await response.json();\n  return answer;\n};\n\n\n\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/modules/GetRequest.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ getPictures)\n/* harmony export */ });\nconst baseUrl = 'https://api.nasa.gov/planetary/apod?api_key=';\nconst key = 'j9gWflgyCduUULTGmKMfahoaNAbzAULMkGGuu9jN';\nconst startDate = '2022-01-25';\nconst endDate = '2022-02-06';\nconst url = `${baseUrl}${key}&start_date=${startDate}&end_date=${endDate}`;\n\nconst getPictures = async () => {\n  const response = await fetch(url);\n  const answer = await response.json();\n  return answer;\n};\n\n\n\n\n//# sourceURL=webpack://AstronomyPictureOfTheDay/./src/modules/GetRequest.js?");
 
 /***/ }),
 
