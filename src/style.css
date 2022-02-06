@@ -121,6 +121,10 @@ header {
   color: var(--light-violet);
 }
 
+.github-link:hover {
+  color: var(--light-violet);
+}
+
 .item-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
