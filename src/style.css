@@ -98,6 +98,9 @@ header {
   font-family: "Nasalization", sans-serif;
   font-size: 2.7rem;
   margin: 0 0;
+}
+
+.web-title a {
   color: var(--custom-red);
 }
 
@@ -115,12 +118,7 @@ header {
 }
 
 .title-link {
-  text-decoration: none;
-}
-
-.title-link:hover {
   color: var(--light-violet);
-  cursor: pointer;
 }
 
 .item-grid {
@@ -271,7 +269,7 @@ header p {
 nav ul li {
   list-style-type: none;
   display: inline;
-  padding: 0 30px;
+  padding: 0 20px;
   font-size: 1.2rem;
 }
 
@@ -279,10 +277,10 @@ nav ul li a {
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--light-violet);
+nav ul li:hover {
+  transform: scale(1.5);
 }
 
 .active-tab {
-  color: rgb(255, 208, 0);
+  color: var(--light-violet);
 }
