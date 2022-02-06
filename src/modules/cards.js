@@ -7,6 +7,7 @@ const itemGrid = document.querySelector('.item-grid');
 
 const createCards = async () => {
   const myPictures = await getPictures();
+
   myPictures.forEach((item, i) => {
     const card = document.createElement('div');
     card.classList.add('card');
@@ -90,7 +91,11 @@ const createCards = async () => {
   });
 
   const counter = document.getElementById('picture-counter');
-  counter.textContent = countCards();
+  if (myPictures.length === 0) {
+    counter.textContent = 0;
+  } else {
+    counter.textContent = countCards();
+  }
 };
 
 export { createCards as default };

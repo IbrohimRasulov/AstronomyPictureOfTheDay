@@ -5,7 +5,7 @@ const displayComments = async (userID) => {
 
   if (comments.length === undefined) {
     const commentCounter = document.querySelector('.comment-counter');
-    commentCounter.innerHTML = 0;
+    commentCounter.innerHTML = '(0)';
   } else {
     comments.forEach((comment) => {
       const commentContainer = document.querySelector('.comment-container');

@@ -61,12 +61,11 @@ const showCommentCard = async (title) => {
       extraExplanation.append(copyright, imageDate);
 
       const h2 = document.createElement('h2');
-      h2.innerText = 'Comments (';
+      h2.innerText = 'Comments ';
       const commentCounter = document.createElement('span');
       commentCounter.classList.add('comment-counter');
-      commentCounter.innerText = '';
-      const bracket = document.createTextNode(')');
-      h2.append(commentCounter, bracket);
+
+      h2.appendChild(commentCounter);
 
       const commentContainer = document.createElement('ul');
       commentContainer.classList.add('comment-container');
@@ -99,7 +98,7 @@ const showCommentCard = async (title) => {
         form.reset();
 
         const counter = document.querySelector('.comment-counter');
-        counter.textContent = countComments();
+        counter.innerText = `(${countComments()})`;
       });
     }
   });
@@ -109,7 +108,7 @@ const showCommentCard = async (title) => {
   await displayComments(userID);
 
   const commentCounter = document.querySelector('.comment-counter');
-  commentCounter.innerHTML = countComments();
+  commentCounter.innerText = `(${countComments()})`;
 };
 
 export { showCommentCard as default };
