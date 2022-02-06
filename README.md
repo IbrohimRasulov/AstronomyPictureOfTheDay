@@ -16,7 +16,7 @@ https://user-images.githubusercontent.com/78875455/152668745-d15e8a01-24fd-4355-
 
 ## Live Demo
 
-[Live Demo Link](https://melaniesigrid.github.io/AstronomyPictureOfTheDay/dist/)
+[Live Demo Link](https://ibrohimrasulov.github.io/AstronomyPictureOfTheDay/dist/)
 
 ## Live Video
 
