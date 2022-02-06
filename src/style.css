@@ -94,6 +94,10 @@ header {
   border-radius: 10px;
 }
 
+nav ul li a {
+  text-decoration: none;
+}
+
 .web-title {
   font-family: "Nasalization", sans-serif;
   font-size: 2.7rem;
@@ -275,10 +279,6 @@ nav ul li {
   display: inline;
   padding: 0 20px;
   font-size: 1.2rem;
-}
-
-nav ul li a {
-  text-decoration: none;
 }
 
 nav ul li:hover {
