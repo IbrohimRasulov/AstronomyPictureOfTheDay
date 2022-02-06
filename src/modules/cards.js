@@ -7,6 +7,7 @@ const itemGrid = document.querySelector('.item-grid');
 
 const createCards = async () => {
   const myPictures = await getPictures();
+
   myPictures.forEach((item, i) => {
     const card = document.createElement('div');
     card.classList.add('card');
@@ -16,6 +17,11 @@ const createCards = async () => {
       media.classList.add('picture');
       media.src = item.url;
       card.appendChild(media);
+      media.addEventListener('click', async () => {
+        await showCommentCard(item.title);
+        const modal = document.querySelector('.comment-model');
+        modal.classList.add('active');
+      });
     } else {
       const media = document.createElement('iframe');
       media.classList.add('video');
@@ -66,7 +72,6 @@ const createCards = async () => {
     const comment = document.createElement('button');
     comment.classList.add('comment-btn');
     comment.type = 'button';
-    comment.setAttribute('index', `${i}`);
     comment.setAttribute('title', `${item.title}`);
     comment.innerText = 'Comments';
 
@@ -86,7 +91,11 @@ const createCards = async () => {
   });
 
   const counter = document.getElementById('picture-counter');
-  counter.textContent = countCards();
+  if (myPictures.length === 0) {
+    counter.textContent = 0;
+  } else {
+    counter.textContent = countCards();
+  }
 };
 
 export { createCards as default };
