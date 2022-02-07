@@ -18,10 +18,6 @@ https://user-images.githubusercontent.com/78875455/152668745-d15e8a01-24fd-4355-
 
 [Live Demo Link](https://ibrohimrasulov.github.io/AstronomyPictureOfTheDay/dist/)
 
-## Live Video
-
-[Live video Link](https://youtu.be/kCXQTR1wQN4)
-
 ## Authors
 
 👤 **Ibrohim Rasulov**
